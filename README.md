@@ -123,3 +123,25 @@ drop table movies;
 //Delete the Database
 
 drop database movies_db;
+
+
+//question 7
+
+ select * from movie;
++-------------------+---------+-------------+------------+--------+
+| Title             | Runtime | Genre       | IMDB Score | Rating |
++-------------------+---------+-------------+------------+--------+
+| Starship Troopers |     129 | Sci-Fi      |        7.2 | PG-13  |
+| Waltz With Bashir |      90 | Documentary |        8.0 | R      |
+| Spaceballs        |      96 | Comedy      |        7.1 | PG     |
++-------------------+---------+-------------+------------+--------+
+3 rows in set (0.00 sec)
+ALTER TABLE movie add id int NOT NULL AUTO_INCREMENT PRIMARY KEY;
+Query OK, 0 rows affected (0.09 sec)
+ SELECT id, Rating from movie WHERE Genre IN ('Horror', 'Documentary');
++----+--------+
+| id | Rating |
++----+--------+
+|  2 | R      |
++----+--------+
+1 row in set (0.01 sec)
